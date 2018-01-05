@@ -20,9 +20,10 @@ var lazy = require('lazy');
 var rimraf = require('rimraf').sync;
 var unzip = require('unzip');
 var utils = require('../lib/utils');
+var os = require('os');
 
 var dataPath = path.join(__dirname, '..', 'data');
-var tmpPath = path.join(__dirname, '..', 'tmp');
+var tmpPath = path.join(os.tmpdir(), 'tmp')
 
 var databases = [
 	{
